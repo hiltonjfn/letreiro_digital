@@ -8,14 +8,14 @@
     <script src="js.js"></script>
     <title>Document</title>
 </head>
-<body onload="toggleFullScreen()">
-    <div onclick="conf()" class="invertido" id="invertido">
+<body>
+    <div class="invertido" id="invertido">
         <div id="header">
         
         
         </div>
         <div >
-            <p class="texto" id="texto">Meu_nome_é_Hilton</p>
+            <p onclick="conf()" class="texto" id="texto">Meu_nome_é_Hilton</p>
         </div>-->
     </div>
 
@@ -60,7 +60,7 @@
                     <label style="display: inline;font-size: 20pt;" for="">Velocidade:</label>
                     </div>
                     <div style="width: 50%;display: inline;">
-                    <input type="range" name="" class="slider" id="">
+                    <input type="range" name="" max="10" min="2" class="slider" value="3" id="speed">
                     <br>
                     <input style="margin-top: 5%;padding: 5% 10%;font-size: 30pt;" type="button" onclick="salvar(),conf()" value="Salvar">
                     </div>
@@ -98,6 +98,9 @@
         }
         
         function salvar(){
+            toggleFullScreen();
+            corDaLetra();
+            velocidade();
             var invertido = window.document.getElementById("invertido");
                 invertido.setAttribute('class','invertido');
                 invertido.setAttribute('onclick','conf()');
@@ -105,9 +108,11 @@
             var t = window.document.getElementById("texto");
             var campo = document.getElementById("campo").value;
             t.innerText = campo;
-
+            
             var header = window.document.getElementById("header");
                 header.innerHTML = "vazio";
+
+            
             
         }
 

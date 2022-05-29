@@ -1,3 +1,13 @@
+function corDaLetra(){
+    var x = window.document.getElementById("color").value;
+    document.getElementById('texto').style.color = x;
+}
+function velocidade(){ 
+    var y = window.document.getElementById("speed").value;
+    document.getElementById('texto').style.animationDuration = `${y}s`;
+}
+
+
 function toggleFullScreen() {
     if (!document.fullscreenElement &&    // alternative standard method
         !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {  // current working methods
