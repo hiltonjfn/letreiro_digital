@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body  >
+    <div onclick="conf()" class="invertido" id="invertido">
+        <div id="header">
+        
+        
+        </div>
+        <div >
+            <p class="texto" id="texto">Meu_nome_é_Hilton</p>
+        </div>-->
+    </div>
+
+    
+
+
+
+
+    <script>
+        var visivel = false;
+        function conf(){
+            if(visivel ==false){
+                var header = window.document.getElementById("header");
+                header.innerHTML = ` <header id="config">
+            <h1>Configurações</h1>
+            <label for="">
+                <input placeholder="texto" id="campo" type="text">
+            </label>
+            
+            <label for="">
+                <br>
+                <div >
+                <div style="width: 50%;display: inline;">
+                <label style="display: inline;font-size: 30pt;" for="">COR:</label>
+                </div>
+                <div style="width: 50%;display: inline;">
+                <input style="display: inline;" type="color" name="" id="color">
+                </div>
+
+
+                </div>
+                
+            
+                
+                
+            </label>
+            
+            <label for="">
+                <div >
+                    <br>
+                    <div style="width: 50%;display: inline;">
+                    <label style="display: inline;font-size: 20pt;" for="">Velocidade:</label>
+                    </div>
+                    <div style="width: 50%;display: inline;">
+                    <input type="range" name="" class="slider" id="">
+                    <br>
+                    <input style="margin-top: 5%;padding: 5% 10%;font-size: 30pt;" type="button" onclick="salvar(),conf()" value="Salvar">
+                    </div>
+    
+    
+                    </div>
+
+                
+            </label>
+            
+        </header>
+        `;
+
+                var invertido = window.document.getElementById("invertido");
+                invertido.removeAttribute("class");
+                invertido.removeAttribute("onclick");
+
+                var texto = window.document.getElementById("texto");
+                texto.removeAttribute("class");
+
+                visivel = true;
+            }else{
+                var header = window.document.getElementById("header");
+                header.innerHTML = "vazio";
+
+                var invertido = document.getElementById("invertido")
+                invertido.removeAttribute("onclick");
+
+                window.document.getElementById("texto").setAttribute('class','texto');
+
+                visivel = false;
+            }
+            
+
+        }
+        
+        function salvar(){
+            var invertido = window.document.getElementById("invertido");
+                invertido.setAttribute('class','invertido');
+                invertido.setAttribute('onclick','conf()');
+
+            var t = window.document.getElementById("texto");
+            var campo = document.getElementById("campo").value;
+            t.innerText = campo;
+
+            var header = window.document.getElementById("header");
+                header.innerHTML = "vazio";
+            
+        }
+
+    </script>
+</body>
+</html>
