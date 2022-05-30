@@ -20,7 +20,7 @@
     </div>
 
     
-
+    
 
 
 
@@ -62,6 +62,7 @@
                     <div style="width: 50%;display: inline;">
                     <input type="range" name="" max="10" min="2" class="slider" value="3" id="speed">
                     <br>
+                    <button onclick="toggleFullScreen()">Tela cheia</button>
                     <input style="margin-top: 5%;padding: 5% 10%;font-size: 30pt;" type="button" onclick="salvar(),conf()" value="Salvar">
                     </div>
     
@@ -90,6 +91,7 @@
                 invertido.removeAttribute("onclick");
 
                 window.document.getElementById("texto").setAttribute('class','texto');
+                
 
                 visivel = false;
             }
@@ -97,8 +99,7 @@
 
         }
         
-        function salvar(){
-            
+        function salvar(){           
             corDaLetra();
             velocidade();
             var invertido = window.document.getElementById("invertido");
