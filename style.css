@@ -23,22 +23,25 @@ body{
     color: aliceblue;
 }
 .texto{
-    width: 2000%;
     background-color: black;
     position: relative;
     color: white;
     font-family: led;
     font-size: 180pt;
     left: 2500px;
-    margin: 0px 0px 0px 140vh;
-    animation-name: carregando;
+    
+    animation-name: carregando20;
     animation-timing-function: linear;
     animation-duration: 5s;
     animation-iteration-count: infinite;
 }
-@keyframes carregando{
-    0% {left: 120vh;}
-    100% {left: -600vh;}
+@keyframes carregando40{
+    0% {left: 120vh;margin: 0px 0px 0px 140vh;width: 2000%;}
+    100% {left: -600vh;margin: 0px 0px 0px 140vh;width: 2000%;}
+}
+@keyframes carregando20{
+    0% {left: 120vh;margin: 0px;width: 870%;}
+    100% {left: -1600pt;margin: 0px;width: 870%;}
 }
 #config{
     text-align: center;
