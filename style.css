@@ -10,8 +10,10 @@
 body{
     background-color: black;
     position: absolute;
-    width: 500px;
+    width: 180pt;
     overflow-y: hidden;
+    margin: 0px;
+    padding: 20%;
 
 }
 .caixa{
@@ -28,15 +30,15 @@ body{
     font-family: led;
     font-size: 180pt;
     left: 2500px;
-    margin: 0px;
+    margin: 0px 0px 0px 140vh;
     animation-name: carregando;
     animation-timing-function: linear;
     animation-duration: 5s;
     animation-iteration-count: infinite;
 }
 @keyframes carregando{
-    0% {left: 2500px;}
-    100% {left: -2000px;}
+    0% {left: 120vh;}
+    100% {left: -600vh;}
 }
 #config{
     text-align: center;
